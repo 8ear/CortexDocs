@@ -21,9 +21,33 @@ on is free or requires special access or valid subscription or product license.
 
 ## Table of Contents
  * [Introduction](#introduction)
-  * [Free Analyzers](#free-analyzers)
+  * [Out of Box Analyzers](#out-of-box-analyzers)
     * [Abuse\_Finder](#abuse_finder)
-    * [AbuseIPDB](#abuseipdb)
+    * [Crtsh](#crtsh)
+    * [Cybercrime\-Tracker](#cybercrime-tracker)
+    * [Cyberprotect](#cyberprotect)
+    * [DShield](#dshield)
+    * [EmailRep](#emailrep)
+    * [EmlParser](#emlparser)
+    * [GoogleDNS](#googledns)
+    * [HIBP](#hibp)
+      * [Requirements](#requirements-12)
+    * [Maltiverse](#maltiverse)
+    * [Msg\_Parser](#msg_parser)
+    * [Robtex](#robtex)
+    * [SpamhausDBL](#spamhausdbl)
+    * [Talos Reputation](#talos-reputation)
+    * [Team Cymru MHR](#team-cymru-mhr)
+    * [ThreatCrowd](#threatcrowd)
+    * [Tor Blutmagie](#tor-blutmagie)
+      * [Requirements](#requirements-28)
+    * [Tor Project](#tor-project)
+      * [Requirements](#requirements-29)
+    * [Unshortenlink](#unshortenlink)
+    * [UrlScan\.io](#urlscanio)
+    * [URLhaus](#urlhaus)
+  * [Free Analyzers](#free-analyzers)
+    * [AbuseIPDB - API key required](#abuseipdb)
       * [Requirements](#requirements)
     * [Backscatter\.io](#backscatterio)
       * [Requirements](#requirements-1)
@@ -32,46 +56,35 @@ on is free or requires special access or valid subscription or product license.
     * [Censys\.io](#censysio)
       * [Requirements](#requirements-3)
     * [Clamav](#clamav)
-    * [Crtsh](#crtsh)
     * [CuckooSandbox](#cuckoosandbox)
       * [Requirements](#requirements-4)
     * [CyberChef](#cyberchef) 
-    * [Cybercrime\-Tracker](#cybercrime-tracker)
-    * [Cyberprotect](#cyberprotect)
     * [Cymon](#cymon)
       * [Requirements](#requirements-5)
     * [DNSSinkhole](#dnssinkhole)
       * [Requirements](#requirements-6)
-    * [DShield](#dshield)
-    * [EmailRep](#emailrep)
-    * [EmlParser](#emlparser)
     * [FileInfo](#fileinfo)
       * [Requirements](#requirements-7)
     * [FireHOLBlocklists](#fireholblocklists)
       * [Requirements](#requirements-8)
     * [Fortiguard](#fortiguard)
       * [Requirements](#requirements-9)
-    * [GoogleDNS](#googledns)
     * [GoogleSafeBrowsing](#googlesafebrowsing)
       * [Requirements](#requirements-10)
     * [Hashdd](#hashdd)
       * [Requirements](#requirements-11)
-    * [HIBP](#hibp)
-      * [Requirements](#requirements-12)
     * [Hippocampe](#hippocampe)
       * [Requirements](#requirements-13)
     * [HybridAnalysis](#hybridanalysis)
       * [Requirements](#requirements-14)
     * [Hunterio\_DomainSearch](#hunterio_domainsearch)
       * [Requirements](#requirements-15)
-    * [Maltiverse](#maltiverse)
     * [MalwareClustering](#malwareclustering)
     * [MaxMind](#maxmind)
     * [MISP](#misp)
       * [Requirements](#requirements-16)
     * [MISP Warninglists](#misp-warninglists)
       * [Requirements](#requirements-17)
-    * [Msg\_Parser](#msg_parser)
     * [NSLR](#nslr)
       * [Requirements](#requirements-18)
     * [Onyphe](#onyphe)
@@ -88,22 +101,10 @@ on is free or requires special access or valid subscription or product license.
       * [Requirements](#requirements-24)
     * [Pulsedive](#pulsedive)
       * [Requirements](#requirements-25)
-    * [Robtex](#robtex)
-    * [SpamhausDBL](#spamhausdbl)
     * [StaxxSearch](#staxxsearch)
       * [Requirements](#requirements-26)
     * [StopForumSpam](#stopforumspam)
       * [Requirements](#requirements-27)
-    * [Talos Reputation](#talos-reputation)
-    * [Team Cymru MHR](#team-cymru-mhr)
-    * [ThreatCrowd](#threatcrowd)
-    * [Tor Blutmagie](#tor-blutmagie)
-      * [Requirements](#requirements-28)
-    * [Tor Project](#tor-project)
-      * [Requirements](#requirements-29)
-    * [Unshortenlink](#unshortenlink)
-    * [UrlScan\.io](#urlscanio)
-    * [URLhaus](#urlhaus)
     * [Virusshare](#virusshare)
       * [Requirements](#requirements-30)
     * [WOT](#wot)
@@ -209,7 +210,9 @@ All analyzer and responder configuration settings must be made using the Cortex 
 By default, and within every freshly created organization, all analyzers and responders are disabled. If you want to
  enable and configure them, use the Web UI (**Organization** > **Configurations** and **Organization** > **Analyzers** tabs).
 
-## Free Analyzers
+## Out of Box Analyzers
+All these analyzers can be used without extra required API keys or changes on cortex itself.
+If you activate one of this analyzers it can be that you must define the setting of the analyzer but nothing more.
 
 ### Abuse_Finder
 Use CERT-SG's [Abuse Finder](https://github.com/certsocietegenerale/abuse_finder)
@@ -218,6 +221,13 @@ to find abuse contacts associated with domain names, URLs, IPs and email address
 The analyzer comes in only one flavor.
 
 No configuration is required. It can be used out of the box.
+
+
+## Free Analyzers
+All these analyzers can be used without costs, but you must do one of the following actions:
+- Create an free API key
+- Host an application
+- Download files to cortex
 
 ### AbuseIPDB
 
